@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:stretchColumns="10">
+
+
+    <TextView
+        android:text="Proveedor."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtdetalle"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fecha"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="14sp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_alignBaseline="@+id/producto"
+        android:layout_alignBottom="@+id/producto"
+        android:layout_alignLeft="@+id/txtdetalle"
+        android:layout_alignStart="@+id/txtdetalle" />
+
+    <TextView
+        android:text="Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/total"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="14sp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_alignBaseline="@+id/fecha"
+        android:layout_alignBottom="@+id/fecha"
+        android:layout_toRightOf="@+id/txtdetalle"
+        android:layout_toEndOf="@+id/txtdetalle" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lstdetalle"
+        android:scrollbars="horizontal|vertical"
+        android:layout_below="@+id/fecha"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp" />
+
+    <TextView
+        android:text="N° Requisición"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/producto"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="14sp"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/txtdetalle"
+        android:layout_alignLeft="@+id/lstdetalle"
+        android:layout_alignStart="@+id/lstdetalle" />
+
+    <TextView
+        android:id="@+id/txtnombre"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="12sp"
+        android:layout_below="@+id/txtdetalle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/nombre"
+        android:textAllCaps="true" />
+
+    <TextView
+        android:text="Nombre:  "
+        android:layout_width="wrap_content"
+        android:id="@+id/nombre"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="13sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtnombre"
+        android:layout_alignLeft="@+id/producto"
+        android:layout_alignStart="@+id/producto" />
+
+</RelativeLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:stretchColumns="10">
+
+
+    <TextView
+        android:text="Detalle."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtdetalle"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="N°"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numero"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_alignBottom="@+id/txtdetalle"
+        android:layout_alignRight="@+id/btnaceptar"
+        android:layout_alignEnd="@+id/btnaceptar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtorden"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/numero"
+        android:layout_alignBottom="@+id/numero"
+        android:layout_toRightOf="@+id/numero"
+        android:layout_toEndOf="@+id/numero"
+        android:maxLines="1"
+        android:maxLength="5"
+        android:ellipsize="end"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lstdetalle"
+        android:scrollbars="horizontal|vertical"
+        android:layout_marginTop="127dp"
+        android:layout_alignLeft="@+id/producto"
+        android:layout_alignStart="@+id/producto"
+        android:layout_above="@+id/btncancelar"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:text="Productos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/producto"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_below="@+id/nombre"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_delete"
+        android:tint="#FFFFFF"
+        android:id="@+id/btncancelar"
+        app:elevation="50dp"
+        app:backgroundTint="#a71616"
+        app:rippleColor="#ff9100"
+        android:layout_alignTop="@+id/btnaceptar"
+        android:layout_toLeftOf="@+id/txtdetalle"
+        android:layout_toStartOf="@+id/txtdetalle"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="5dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/acep"
+
+        android:id="@+id/btnaceptar"
+        app:elevation="50dp"
+        app:rippleColor="#00ff00"
+        app:backgroundTint="#006000"
+        android:tint="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/txtdetalle"
+        android:layout_toEndOf="@+id/txtdetalle"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:text="Nombre:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nombre"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="12sp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/txtdetalle"
+        android:layout_alignLeft="@+id/producto"
+        android:layout_alignStart="@+id/producto"
+        android:layout_toStartOf="@+id/txtnombre"
+        android:layout_toLeftOf="@+id/txtnombre" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btncancelar"
+        android:layout_alignStart="@+id/btncancelar"
+        android:id="@+id/txtnombre"
+        android:layout_above="@+id/producto"
+        android:textSize="12sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="normal|bold"
+        />
+
+    <TextView
+        android:id="@+id/txtasignado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nombre"
+        android:layout_alignLeft="@+id/nombre"
+        android:layout_alignStart="@+id/nombre"
+        android:layout_marginLeft="9dp"
+        android:layout_marginStart="9dp"
+        android:text="FPADILLA"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/txttipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnaceptar"
+        android:layout_toLeftOf="@+id/btnaceptar"
+        android:layout_toStartOf="@+id/btnaceptar"
+        android:text="A1"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        tools:text="A1" />
+
+    <TextView
+        android:id="@+id/txtusuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JMUNOZ"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:layout_alignTop="@+id/txttipo"
+        android:layout_toRightOf="@+id/btncancelar"
+        android:layout_toEndOf="@+id/btncancelar" />
+
+</RelativeLayout>

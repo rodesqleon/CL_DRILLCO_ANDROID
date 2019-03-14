@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:weightSum="10" >
+
+
+    <TextView
+        android:id="@+id/lblheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Historia."
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="calibri" />
+
+    <TextView
+        android:text="Proveedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtproveedor"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_below="@+id/lblheader"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="59dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lstorden"
+        android:dividerHeight="1dp"
+        android:layout_below="@+id/txtproveedor"
+        android:layout_alignLeft="@+id/txtproveedor"
+        android:layout_alignStart="@+id/txtproveedor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtproducto"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="14sp"
+        android:layout_alignBaseline="@+id/producto"
+        android:layout_alignBottom="@+id/producto"
+        android:layout_toRightOf="@+id/txtproveedor"
+        android:layout_toEndOf="@+id/txtproveedor"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
+        android:maxLength="50" />
+
+    <TextView
+        android:text="Producto:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/producto"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="14sp"
+        android:layout_below="@+id/lblheader"
+        android:layout_alignLeft="@+id/txtproveedor"
+        android:layout_alignStart="@+id/txtproveedor" />
+
+</RelativeLayout>
